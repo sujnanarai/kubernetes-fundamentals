@@ -7,7 +7,21 @@
   - Container is encapsulated in to a Kubernetes Object named POD.
   - A POD is a single instance of an application.
   - A POD is the smallest object that we can create in Kubernetes. 
+  - PODs generally have one to one relationship with containers. 
+  - To scale up we create new POD and to scale down we delete the POD!
+  - We cannot have multiple containers of same kind in a single POD. 
+  - Example: Two NGINX containers in single POD serving same purpose is not recommended. 
 - What is a Multi-Container POD?
+  - We can have multiple containers in a single POD, provided they are not of same kind. 
+  - Helper Containers (Side-car)
+      - Data Pullers: Pull data required by Main Container
+      - Data pushers: Push data by collecting from main container (logs)
+      - Proxies: Writes static data to html files using Helper container and Reads using Main Container. 
+   - Communication
+        - The two containers can easily communicate with each other easily as they share same network space.
+        - They can also easily share same storage space. 
+   - Multi-Container Pods is a rare use-case and we will try to focus on core fundamentals. 
+
 
 ## Step-02: PODs Demo
 ### Get Worker Nodes Status
