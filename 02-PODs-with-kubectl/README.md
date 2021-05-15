@@ -2,6 +2,11 @@
 
 ## Step-01: PODs Introduction
 - What is a POD ?
+  - With Kubernetes our core goal will be to deploy our applications in the form of containers on worker nodes in a k8s cluster. 
+  - Kubernetes does not deploy containers directly on the worker nodes.
+  - Container is encapsulated in to a Kubernetes Object named POD.
+  - A POD is a single instance of an application.
+  - A POD is the smallest object that we can create in Kubernetes. 
 - What is a Multi-Container POD?
 
 ## Step-02: PODs Demo
