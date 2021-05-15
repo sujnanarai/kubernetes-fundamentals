@@ -106,6 +106,7 @@ kubectl delete pod my-first-pod
 - What are Services in k8s?
 - What is a NodePort Service?
 - How it works?
+
 **Services in k8s**
 We can expose an application running on a set of PODs using different types of Services available in k8s. 
 - ClusterIP : is specific to a cluster. That means its boundary only a cluster. Inside a cluster the pod is accessible with  cluster IP, if ClusterIP service is created.
