@@ -106,6 +106,16 @@ kubectl delete pod my-first-pod
 - What are Services in k8s?
 - What is a NodePort Service?
 - How it works?
+**Services in k8s**
+We can expose an application running on a set of PODs using different types of Services available in k8s. 
+- ClusterIP : is specific to a cluster. That means its boundary only a cluster. Inside a cluster the pod is accessible with  cluster IP, if ClusterIP service is created.
+- NodePort : The appication can be accessed externally using port defined in NodePort via internet
+- LoadBalancer : This is specifically for cloud providers like AWS, Google to create Load balancers automatically.
+- NodePort Service 
+	- To access our application outside of k8s cluster, we can use NodePort service. 
+	- Exposes the Service on each Worker Node's IP at a static port (nothing but NodePort). 
+	- A ClusterIP Service, to which the NodePort Service routes, is automatically created. 
+	- Port Range 30000-32767
 
 ## Step-04: Demo - Expose Pod with a Service
 - Expose pod with a service (NodePort Service) to access the application externally (from internet)
