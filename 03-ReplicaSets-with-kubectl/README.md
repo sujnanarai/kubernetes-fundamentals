@@ -2,7 +2,27 @@
 
 ## Step-01: Introduction to ReplicaSets
 - What are ReplicaSets?
-- What is the advantage of using ReplicaSets?
+    - A ReplicaSet will maintain a stable set of replica Pods running at any given time. 
+    - In short, it is often used to guarantee the availability of a specified number of identical Pods
+    
+- What is the advantage of using ReplicaSets?  
+  - Helps in achieving High **Hvailablility or Reliability** for applications hosted on k8s
+  - Helps to seamlessly **Scale** applications
+  - In combitation with Services and ReplicationSets, effective **Load Balancing** can be achieved.
+  - Using **Lables and Selectors** the services and pods can be tied together
+
+- **Hvailablility or Reliability**
+      - A ReplicaSet’s purpose is to maintain a stable set of replica Pods running at any given time.
+      - If our application crashes (any pod dies), replicaset will recreate the pod immediately to ensure the configured number of pods running at any given time.  
+- **Load Balancing**
+      - To avoid overloading of traffic to single pod we can use load balancing. 
+      - Kubernetes provides pod load balancing out of the box using **Services** for the pods which are part of a ReplicaSet
+      - **Labels & Selectors** are the key items which ties all 3 together (Pod, ReplicaSet & Service), we will know in detail when we are writing YAML manifests for these objects
+- **Scaling**
+      - When load become too much for the number of existing pods, Kubernetes enables us to easily **scale** up our application, adding additional pods as needed.
+      - This is going to be seamless and super quick. 
+
+
 
 ## Step-02: Create ReplicaSet
 
