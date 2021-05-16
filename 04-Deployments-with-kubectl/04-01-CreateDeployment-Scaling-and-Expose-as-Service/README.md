@@ -7,6 +7,17 @@
 - Scale the Deployment
 - Expose the Deployment as a Service
 
+- **Deployment Features**
+    - Create a Deployment to rollout a ReplicaSet
+    - Updating the Deployment
+    - Rolling Back a Deployment
+    - Scaling a Deployment
+    - Pausing and Resuming a Deployment
+    - Deployment Status
+    - Clean up Policy
+    - Canary Deployments
+
+
 ## Step-02: Create Deployment
 - Create Deployment to rollout a ReplicaSet
 - Verify Deployment, ReplicaSet & Pods
