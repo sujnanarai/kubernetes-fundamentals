@@ -2,10 +2,11 @@
 
 ## Step-01: Introduction to Services
 - **Service Types**
-  1. ClusterIp
-  2. NodePort
-  3. LoadBalancer
-  4. ExternalName
+  1. ClusterIp : Used for communication between applications inside k8s cluster (Example: Frontend application accessing backend application)
+  2. NodePort : Used for accessing applications outside of of k8s cluster using Worker Node Ports (Example: Accessing Frontend application on browser)
+  3. LoadBalancer : Primarily for Cloud Providers to integrate with their Load Balancer services (Example: AWS Elastic Load Balancer)
+  4. Ingress : Ingress is an advanced load balancer which provides Context path based routing, SSL, SSL Redirect and many more (Example: AWS ALB)
+  5. ExternalName : To access externally hosted apps in k8s cluster (Example: Access AWS RDS Database endpoint by application present inside k8s cluster)
 - We are going to look in to ClusterIP and NodePort in this section with a detailed example. 
 - LoadBalancer Type is primarily for cloud providers and it will differ cloud to cloud, so we will do it accordingly (per cloud basis)
 - ExternalName doesn't have Imperative commands and we need to write YAML definition for the same, so we will look in to it as and when it is required in our course. 
